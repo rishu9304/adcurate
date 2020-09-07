@@ -1,0 +1,50 @@
+#Runing the code 
+1.create the virtual environment
+2.pip install -r requirments.txt #to install the packages.
+3./manage.py delete_date_from_table #run command to delete all the data from invoice table
+4../manage.py runserver
+
+
+#I have added two templates for processing the pdf documents
+
+
+#api for uploading the pdf using form-data
+http://127.0.0.1:8000/invoiceupdate/
+method:"POST"
+
+
+#api for updating the invoic
+http://127.0.0.1:8000/invoiceupdate/
+method: "PUT"
+{
+    "invoice":"INV-LS353348",
+    "email":"agarahari110@gmail.com",
+    "contact":"7001354181",
+    "total":"100",
+    "address":"spice garden",
+    "date":"09/06/2020"
+}
+
+#api for creating the invoicing
+http://127.0.0.1:8000/invoicecreate/
+method: "POST"
+{
+    "invoice":"INV-LS353348",
+    "email":"agarahari110@gmail.com",
+    "contact":"7001354181",
+    "total":"100",
+    "address":"spice garden",
+    "date":"09/06/2020"
+}
+
+#api to get the information of invoice
+http://127.0.0.1:8000/invoiceinfo/
+method:"GET"
+{
+	"invoice":"INV-LS353348"
+}
+
+
+
+
+
